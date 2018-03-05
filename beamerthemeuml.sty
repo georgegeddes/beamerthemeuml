@@ -44,16 +44,18 @@
 
 \defbeamertemplate*{title page}{uml theme}[1][]
 { 
+  \newlength\@titleboxwidth
+  \setlength\@titleboxwidth{\the\paperwidth - \the\paperheight + 3cm}
    \vskip3cm%
-    \begin{beamercolorbox}[wd=12cm,#1]{title page header}
+    \begin{beamercolorbox}[wd=\@titleboxwidth,#1]{title page header}
       \usebeamerfont{title}\inserttitle\par%
     \end{beamercolorbox}%
     \vskip0.75cm%
-    \begin{beamercolorbox}[wd=12cm,#1]{author}
+    \begin{beamercolorbox}[wd=\@titleboxwidth,#1]{author}
       \usebeamerfont{author}\insertauthor%
     \end{beamercolorbox}
      \vskip0.2cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=0cm,#1]{date}
+    \begin{beamercolorbox}[wd=\@titleboxwidth,leftskip=0cm,#1]{date}
       \usebeamerfont{author}\insertdate%
     \end{beamercolorbox}
     \vfill
