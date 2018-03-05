@@ -1,0 +1,29 @@
+\mode<presentation>
+
+% \definespotcolor{UMLblue}{PMS 293}{1, 0.57, 0, 0.02}
+\definecolor{UMLblue}{cmyk}{1, 0.57, 0, 0.02}
+\definecolor{UMLgray}{cmyk}{0, 0, 0, 0.3}  % 30% gray, not really official
+\definecolor{UMLblack}{cmyk}{0, 0.0, 0.0, 1}  % black from UML logo
+\definecolor{UMLred}{cmyk}{0, 1, 0.86, 0.04}
+
+\setbeamercolor{structure}{fg=UMLblue, bg=white} % itemize, enumerate, etc
+% \setbeamercolor{section in toc}{fg=UMLblack} % TOC sections
+
+\setbeamercolor{palette primary}{use=structure,fg=structure.fg,bg=structure.bg}
+\setbeamercolor{palette secondary}{use=structure,fg=structure.fg,bg=UMLgray}
+\setbeamercolor{palette tertiary}{use=structure,fg=structure.bg,bg=structure.fg}
+\setbeamercolor{palette quaternary}{bg=UMLblack,fg=white}
+
+\setbeamercolor*{sidebar}{parent=palette secondary,}
+
+% \setbeamercolor{palette sidebar primary}{parent=palette primary}
+% \setbeamercolor{palette sidebar secondary}{parent=palette secondary}
+% \setbeamercolor{palette sidebar tertiary}{parent=palette tertiary}
+% \setbeamercolor{palette sidebar quaternary}{parent=palette quaternary}
+
+\setbeamercolor*{frametitle}{use={palette tertiary, structure},fg=structure.fg, bg=structure.bg}
+
+\setbeamercolor{alerted text}{use=structure,fg=UMLred,bg=structure.bg}
+
+
+\mode<all>
