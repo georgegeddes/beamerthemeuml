@@ -1,79 +1,13 @@
 \mode<presentation>
 
-\RequirePackage{tikz}
-\RequirePackage{calc}
-\RequirePackage{graphicx}
-
-% \setbeamertemplate{blocks}[rounded][shadow=true]
-\setbeamertemplate{headline}{}
-
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}[frame number]
-
+\useoutertheme{uml}
+\useinnertheme{default}
+\usecolortheme{uml}
 \usefonttheme{structurebold}
-% \setbeamerfont{title}{shape=\bfseries}
-\setbeamerfont{email}{shape=\tt, size=\small}
 
-\newcommand*{\email}[1]{\newcommand*\beamer@email{#1}}
+\RequirePackage{umltitlepage}
 
-\newcommand{\insertemail}{%
-  \ifdefined\beamer@email%
-  \beamer@email%
-  \else\relax%
-  \fi%
-  }
-
-\setbeamertemplate{background}{
-\newcommand\x{\the\paperheight / 5 * 2}  % width of the small triangle
-\begin{tikzpicture}
-  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \ifnum\thepage>1\relax
-  \usebeamercolor{palette primary}
-   %\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  %\fill[bg] (-1,\the\paperheight) rectangle (\the\paperwidth,\the\paperheight-3 \the\headheight);
-   \else%
-   \usebeamercolor{palette secondary}
-   % \fill[black] (0,0) rectangle(2.95,1.9);
-   % \fill[UMLblue] (3.05,0) rectangle(\the\paperwidth,1.9);
-   \fill[fg] (\the\paperwidth - \the\paperheight, \the\paperheight) -- (\the\paperwidth,\the\paperheight) -- (\the\paperwidth, 0);
-   \fill[bg] (\the\paperwidth - \x,0) -- (\the\paperwidth,0) -- (\the\paperwidth,\x) -- cycle;
-   \fi
- \end{tikzpicture}
- \let\x\relax
-}
-
-\defbeamertemplate*{title page}{uml theme}[1][]
-{ 
-  \newlength\@titleboxwidth
-  \setlength\@titleboxwidth{\the\paperwidth - \the\paperheight + 3cm}
-   \vskip3cm%
-    \begin{beamercolorbox}[wd=\@titleboxwidth,#1]{title page header}
-      \usebeamerfont{title}\inserttitle\par%
-    \end{beamercolorbox}%
-    \vskip0.75cm%
-    \begin{beamercolorbox}[wd=\@titleboxwidth,#1]{author}
-      \usebeamerfont{author}\insertauthor%
-    \end{beamercolorbox}
-     \vskip0.2cm%
-    \begin{beamercolorbox}[wd=\@titleboxwidth,leftskip=0cm,#1]{date}
-      \usebeamerfont{author}\insertdate%
-    \end{beamercolorbox}
-    \vfill
-    \begin{beamercolorbox}{author}
-      \usebeamerfont{email}\insertemail%
-    \end{beamercolorbox}
-  \vfill
-}
-
-\renewcommand{\maketitle}{%
-  {\setbeamertemplate{footline}{}
-    \ifbeamer@inframe %
-     \titlepage %
-    \else %
-     \frame[noframenumbering] {\titlepage } %
-    \fi}}
-
-
+\RequirePackage{graphicx}
 \logo{\includegraphics[height=1cm]{vertical_logo}}
 
 \mode<all>
