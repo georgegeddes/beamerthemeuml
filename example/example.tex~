@@ -1,0 +1,6 @@
+\documentclass[presentation]{beamer}
+\usetheme{uml}
+\title{A Very Interesting Presentation}
+\author{A. Great Speaker}
+
+\begin{frame}
