@@ -7,7 +7,7 @@ Powerpoint template and the color scheme uses the official colors.
 
 # Installation
 
-To install, copy these files to somewhere in `TEXMFHOME` or
+To install, place the `beamerthemeuml` directory somewhere in `TEXMFHOME` or
 `TEXMFLOCAL`. If you are not sure where these are on your system, you
 can find out using this command:
 
